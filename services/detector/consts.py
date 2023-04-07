@@ -1,0 +1,5 @@
+PRETRAINED = "model"
+
+INSECURE_PORT = "[::]:50052"
+MAX_WORKERS = 10
+
