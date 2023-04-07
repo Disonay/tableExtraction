@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package services.converter;
+
+service Pdf2ImgConverterService {
+    rpc Convert (PdfFile) returns (Image) {};
+}
+
+message PdfFile {
+    string pdf_url = 1;
+}
+
+message Image {
+    string image_url = 1;
+}

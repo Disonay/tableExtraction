@@ -1,0 +1,1 @@
+python -m grpc_tools.protoc --proto_path=./protos --python_out=gen --grpc_python_out=gen protos/*.proto

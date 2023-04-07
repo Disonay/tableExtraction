@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package services.detector;
+
+service TableAreaDetectorService {
+    rpc Detect (Image) returns (TableCoordinates) {};
+}
+
+message Image {
+    string image_url = 1;
+}
+
+message TableCoordinates {
+     repeated float table_coordinates = 1 [packed=true];
+}
+

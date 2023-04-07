@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package services.extractor;
+
+service TableExtractionService {
+    rpc Extract (TableExtractionRequest) returns (TableData) {};
+}
+
+message TableExtractionRequest {
+    string pdf_url = 1;
+    repeated float table_coordinates = 2 [packed=true];
+}
+
+message TableData {
+    string table_data = 1;
+}
